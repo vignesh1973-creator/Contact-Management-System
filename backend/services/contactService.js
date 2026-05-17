@@ -2,7 +2,7 @@ import Contact from "../models/contact.js";
 
 const createContactService = async(data)=>{
     
-    const {userName , companyName , email , status} = data;
+    const {userName , companyName , email ,phoneNo, status} = data;
     
         const existing = await Contact.findOne({email})
     
@@ -16,6 +16,7 @@ const createContactService = async(data)=>{
             userName,
             companyName,
             email,
+            phoneNo,
             status
         })
 

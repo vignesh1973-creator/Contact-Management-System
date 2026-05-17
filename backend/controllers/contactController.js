@@ -14,7 +14,7 @@ const createContact = asyncHandler(async(req,res)=>{
     res.status(201)
         .json({
             success: true,
-            ...user
+            result: user
         })
         
 })
